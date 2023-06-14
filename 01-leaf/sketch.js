@@ -89,7 +89,7 @@ function draw() {
   energy = map(energy, 0, 255, 0, 1)
 
   // 3. Background setup
-  background(245)
+  background(255)
   noStroke()
 
   // A1. Leaf
