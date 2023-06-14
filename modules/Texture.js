@@ -4,7 +4,7 @@ class Texture {
   }
 
   create() {
-    this.texture = createGraphics(width / 2, height / 2, WEBGL)
+    this.texture = createGraphics(width / 4, height / 4, WEBGL)
     this.texture.noStroke()
     return this.texture
   }
