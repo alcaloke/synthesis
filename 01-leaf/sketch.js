@@ -44,8 +44,7 @@ let r4 = 55
 let n = 0.6
 
 function setup() {
-  let vh = windowHeight * 0.77
-  createCanvas(windowHeight / 2.22, vh, WEBGL)
+  createCanvas(windowWidth, windowHeight, WEBGL)
 
   textureOne = new Texture()
   txtr1 = textureOne.create()
