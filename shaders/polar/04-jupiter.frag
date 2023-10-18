@@ -6,7 +6,8 @@ precision mediump float;
 #define PI 3.14159265359
 
 uniform vec2 u_resolution;
-uniform float u_sec;
+uniform float u_time;
+uniform float u_energy;
 
 float thickness = 0.005;
 float plot(vec2 st, float pct, float thickness){
@@ -31,8 +32,8 @@ void main(){
 
   vec3 pct = vec3(r);
 
-  float f1 = 0.5 * sin(r * 4. - u_sec) + 0.5;
-  float f2 = 0.5 * sin(r * 24. - u_sec) + 0.5;
+  float f1 = 0.5 * sin(r * 4.* u_energy  - u_time) + 0.5;
+  float f2 = 0.5 * sin(r * 24.  - u_time) + 0.5;
   float f3 = pow(r, 2.);
 
   pct.g = f1;
