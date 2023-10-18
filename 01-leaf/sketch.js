@@ -1,27 +1,27 @@
 function preload() {
   shaderOne = loadShader(
     "../shaders/shader.vert",
-    "../shaders/cartesian/02-cold-e1.frag"
+    "../shaders/cartesian/03-mercury.frag"
   )
   shaderTwo = loadShader(
     "../shaders/shader.vert",
-    "../shaders/cartesian/01-warm-e1.frag"
+    "../shaders/cartesian/04-mars.frag"
   )
   shaderThree = loadShader(
     "../shaders/shader.vert",
-    "../shaders/cartesian/02-cold-e2.frag"
+    "../shaders/cartesian/05-venus.frag"
   )
   shaderFour = loadShader(
     "../shaders/shader.vert",
-    "../shaders/polar/03-orangina-e1.frag"
+    "../shaders/polar/04-jupiter.frag"
   )
   shaderFive = loadShader(
     "../shaders/shader.vert",
-    "../shaders/polar/03-orangina-e2.frag"
+    "../shaders/polar/05-pluto.frag"
   )
   shaderSix = loadShader(
     "../shaders/shader.vert",
-    "../shaders/polar/03-orangina-e3.frag"
+    "../shaders/polar/06-neptune.frag"
   )
   mv2 = loadSound("MV2-1.09.mp3")
 }
@@ -66,6 +66,8 @@ function setup() {
   cross = new SuperShape(8, r4, r4, 0.1, 0.1, 6.7)
 
   fft = new p5.FFT([0.8], [64])
+
+  // setInterval(saveCanvas, 1000)
 }
 
 function draw() {
@@ -89,7 +91,7 @@ function draw() {
   energy = map(energy, 0, 255, 0, 1)
 
   // 3. Background setup
-  background(255)
+  background(0)
   noStroke()
 
   // A1. Leaf
