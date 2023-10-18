@@ -320,29 +320,16 @@ Tone.Transport.on("loopEnd", (time) => {
 })
 
 function keyPressed() {
-  if (Tone.context.state !== "running") {
-    Tone.context.resume()
-  }
-
   if (keyCode === 32) {
-    // for (p of ss.particles) {
-    //   p.pos.mult(1.5)
-    // }
-
-    if (bass.state != "started") {
-      Tone.Transport.set({
-        bpm: 117.88,
-        loop: true,
-        loopEnd: loopTime,
-      })
-      Tone.Transport.start()
-    } else {
-      Tone.Transport.pause()
-    }
+    startLoop()
   }
 }
 
 function playPause() {
+  startLoop()
+}
+
+function startLoop() {
   if (Tone.context.state !== "running") {
     Tone.context.resume()
   }
