@@ -46,10 +46,10 @@ function preload() {
 
   multiPlayer = new Tone.Players(
     {
-      bs: "audio/bass.wav",
-      sk: "audio/sineKey.wav",
-      ks: "audio/kns.wav",
-      dr: "audio/drums.wav",
+      bs: "audio/remix/bass.wav",
+      sk: "audio/remix/sineKey.wav",
+      ks: "audio/remix/kns.wav",
+      dr: "audio/remix/drums.wav",
     },
     () => {
       loopTime = multiPlayer.player("bs").buffer.duration
