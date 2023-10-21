@@ -68,7 +68,7 @@ function preload() {
       multiPlayer.volume.value = 2
 
       drum.volume.value = 0
-      drum.mute = true
+      drum.mute = false
       ks.mute = true
       sineKey.mute = false
       bass.mute = true
